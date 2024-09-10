@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Form</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="wrapper-nav">
+            <div class="img-wrapper">
+                <img src="assets/logo-phincon-academy.png" alt="phincon">
+            </div>
+            <h1>Registration Form</h1>
+        </div>
+
+        <form action="" id="formRegis">
+            <div class="form-group">
+                <label for="nama">Nama siswa</label>
+                <input type="text" id="namaSiswa" name="nama" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="kelas">Kelas</label>
+                <input type="text" id="kelas" name="kelas" required class="form-control">
+            </div>
+
+            <div class="form-gender">
+                <label for="gender">Jenis Kelamin</label>
+                <div class="">
+                    <input type="radio" id="laki-laki" name="gender" value="laki-laki" required>
+                    <label for="laki-laki">Laki-laki</label>
+                </div>
+                <div>
+                    <input type="radio" id="perempuan" name="gender" value="perempuan" required>
+                    <label for="perempuan">Perempuan</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="tanggalLahir">Tanggal Lahir</label>
+                <input type="date" id="tanggalLahir" name="tanggalLahir" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pendidikan">Pendidikan Terakhir</label>
+                <select id="pendidikan" name="pendidikan" class="pendidikan" required>
+                    <option value="" disabled selected>Pilih pendidikan</option>
+                    <option value="SMA">SMA</option>
+                    <option value="D3">D3</option>
+                    <option value="S1">S1</option>
+                    <option value="S2">S2</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="jurusan">Jurusan</label>
+                <input type="text" id="jurusan" name="jurusan" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        <h2>Daftar Siswa</h2>
+        <table id="tabelSiswa" border="1">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Kelas</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Pendidikan Terakhir</th>
+                    <th>Jurusan</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <script src="form.js"></script>
+</body>
+
+</html>
