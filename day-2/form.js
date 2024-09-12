@@ -1,6 +1,6 @@
 // Ambil elemen form dan tabel
 const form = document.getElementById('formRegis');
-const tabelSiswa = document.getElementById('tabelSiswa').getElementsByTagName('tbody')[0]; // Akses tbody
+const tabelSiswa = document.getElementById('tabelSiswa').getElementsByTagName('tbody')[0];
 
 // Menambahkan event listener pada submit form
 form.addEventListener('submit', function (event) {

@@ -2,10 +2,10 @@ import findLastOperator from './findLastOperator.js';
 
 function formatOutput(input, operators) {
     const output = [];
-    
+
     if (!input.length) {
         return '0';
-    } 
+    }
 
     // IF THERE ARE OPERATORS IN THE INPUT, separate the numbers out
     else if (input.some(item => operators.indexOf(item) !== -1)) {
@@ -15,16 +15,16 @@ function formatOutput(input, operators) {
         for (let i = 0; i < input.length; i++) {
             if (operators.includes(input[i])) {
                 endSlice = i;
-                let num = Number(input.slice(startSlice, endSlice).join('')).toLocaleString('en-UK', {maximumFractionDigits: 20});
+                let num = Number(input.slice(startSlice, endSlice).join('')).toLocaleString('en-UK', { maximumFractionDigits: 20 });
                 output.push(num);
                 output.push(input[i]);
-        
+
                 //reassign start slice 
                 startSlice = i + 1;
             }
         }
         // don't forget the last number
-        if (!operators.includes(input[input.length-1])) {
+        if (!operators.includes(input[input.length - 1])) {
             const lastOperator = findLastOperator(input, operators);
             const lastNumber = input.slice(lastOperator + 1).join('');
             output.push(lastNumber);
@@ -37,9 +37,6 @@ function formatOutput(input, operators) {
         output.push(input.join(''));
     }
 
-    // if (input[input.length-1] === '.') {
-    //     output.push('.');
-    // }
 
     // and display
     return output.length > 0 ? output.join('') : '0';
