@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/homework.png">
+    <link rel="stylesheet" href="style.css">
+    <script src='js/app.js' type="module"></script>
+    <title>Calculator App Egal</title>
+
+</head>
+
+<body class="dark-theme" id="body">
+    <main>
+        <div class="calc__wrapper">
+            <div class="calc">
+                <div class="calc__header">
+                    <h1 class="calc__heading">Kalkulator</h1>
+                    <div>
+                        <fieldset class="theme__switcher">
+                            <legend aria-label="Choose color theme">Tema</legend>
+                            <input type="radio" name="theme" id="dark" value="dark-theme" aria-label='Dark color theme'>
+                            <label for="dark">1</label>
+                            <input type="radio" name="theme" id="light" value="light-theme"
+                                aria-label="Light color theme" checked>
+                            <label for="light">2</label>
+                            <input type="radio" name="theme" id="neon" value="neon-theme" aria-label="Neon color theme">
+                            <label for="neon">3</label>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="calc__display">
+                    <p id='display' aria-live="polite">0</p>
+                </div>
+                <div class="calc__keypad-wrapper">
+                    <div class="calc__keypad" id="keypad" role="grid" aria-label="Calculator Keypad">
+                    </div>
+                    <div class="grid__NUX hidden" id="grid-nux" role="region" aria-label="Instruksi Keypad Kalkulator"
+                        tabindex="0">
+                        <p>Pindahkan fokus keyboard di dalam keypad menggunakan tombol panah. Tekan <code>Spasi</code>
+                            untuk mengaktifkan
+                            tombol.</p>
+                        <p>Tekan tombol Home untuk melompat ke tombol kiri atas (7). Tekan tombol End untuk melompat ke
+                            tombol terakhir (=).</p>
+                        <p>Anda juga dapat menggunakan tombol angka dan papan ketik numerik. Tekan Enter untuk
+                            menghitung.</p>
+                        <button id="close-nux-btn">Tutup</button>
+                    </div>
+                    ```
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
